@@ -1,5 +1,12 @@
-// Este es el punto de entrada de tu aplicacion
+import { Home } from './pages/home.js';
+import { Cadastro } from './pages/cadastro.js';
+import { Feed } from './pages/feed.js';
 
-import { myFunction } from './lib/index.js';
+const init = () => {
+  window.addEventListener("hashchange", () => console.log(window.location.hash))
+}
 
-myFunction();
+window.addEventListener("load", () => {
+  document.getElementById("root").append(Home())
+  init();
+})
