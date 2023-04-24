@@ -1,7 +1,7 @@
 export function Feed() {
   const containerFeed = document.createElement("div");
   container.id = "containerFeed"
-  container.innnerHTML = `<title>A rede social para leitoras</title>
+  container.innerHTML = `<title>A rede social para leitoras</title>
   <h1>Olá, !</h1>
   <p>Compartilhe sua opinião, indique seus livros favoritos e curta as leituras das suas amigas!</p>
   </head>
