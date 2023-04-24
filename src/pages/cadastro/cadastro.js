@@ -1,7 +1,7 @@
 export function Cadastro() {
   const containerCadastro = document.createElement("div");
-  container.id = "containerCadastro"
-  container.innnerHTML = ` <h1>Seja bem-vinda!</h1>
+  containerCadastro.id = "containerCadastro"
+  containerCadastro.innerHTML = `<h1>Seja bem-vinda!</h1>
   <p>Faça o seu cadastro e comece agora a compartilhar suas leituras!</p>
   <form>
     <input type="text" id="name" name="name" placeholder="Nome e sobrenome"><br><br>

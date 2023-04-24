@@ -1,12 +1,14 @@
-import { Home } from './pages/home.js';
-import { Cadastro } from './pages/cadastro.js';
-import { Feed } from './pages/feed.js';
+import { Home } from './pages/home/home.js';
+import { Cadastro } from './pages/cadastro/cadastro.js';
+import { Feed } from './pages/feed/feed.js';
 
 const main = document.getElementById('root')
 const init = () => {
   window.addEventListener("hashchange", () => {
+    console.log(window.location.hash);
+    main.innerHTML = ""; //impede que a página se repita
     switch(window.location.hash){
-      case " ":
+      case "#":
         main.appendChild(Home());
         break;
       case "#cadastro":
@@ -22,6 +24,6 @@ const init = () => {
 }
 
 window.addEventListener("load", () => {
-  document.getElementById("root").append(Home())
+  main.appendChild(Home());
   init();
 })
