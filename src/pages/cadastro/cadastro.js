@@ -1,3 +1,4 @@
+// função que o elemento HTML da Home do site
 export function Cadastro() {
   const containerCadastro = document.createElement("div");
   containerCadastro.id = "containerCadastro"
