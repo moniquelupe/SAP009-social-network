@@ -1,6 +1,7 @@
-import { Home } from './pages/home/home.js';
-import { Cadastro } from './pages/cadastro/cadastro.js';
-import { Feed } from './pages/feed/feed.js';
+import { Home } from './pages/Home/home.js';
+import { Cadastro } from './pages/Cadastro/cadastro.js';
+import { Feed } from './pages/Feed/feed.js';
+
 
 const main = document.getElementById('root')
 const init = () => {
@@ -11,7 +12,7 @@ const init = () => {
       case "#":
         main.appendChild(Home());
         break;
-      case "#cadastro":
+       case "#cadastro":
         main.appendChild(Cadastro());
         break;
       case "#feed":
@@ -24,6 +25,7 @@ const init = () => {
 }
 
 window.addEventListener("load", () => {
+   document.getElementById("root").append(Home())
   main.appendChild(Home());
   init();
 })
