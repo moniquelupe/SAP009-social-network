@@ -1,3 +1,4 @@
+// função que o elemento HTML da Home do site
 export function Feed() {
   const containerFeed = document.createElement("div");
   containerFeed.id = "containerFeed"

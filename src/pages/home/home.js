@@ -1,4 +1,4 @@
-// função que cria um elemento HTML e retorna ele
+// função que o elemento HTML da Home do site
 export function Home() {
   const container = document.createElement("div");
   container.id = "container"
