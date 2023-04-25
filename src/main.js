@@ -5,8 +5,10 @@ import { Feed } from './pages/Feed/feed.js';
 const main = document.getElementById('root')
 const init = () => {
   window.addEventListener("hashchange", () => {
+    console.log(window.location.hash);
+    main.innerHTML = ""; //impede que a página se repita
     switch(window.location.hash){
-      case " ":
+      case "#":
         main.appendChild(Home());
         break;
        case "#cadastro":
