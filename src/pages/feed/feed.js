@@ -2,19 +2,22 @@
 export function Feed() {
   const containerFeed = document.createElement("div");
   containerFeed.id = "containerFeed"
-  containerFeed.innerHTML = `<title>A rede social para leitoras</title>
-  <h1>Olá, !</h1>
-  <p>Compartilhe sua opinião, indique seus livros favoritos e curta as leituras das suas amigas!</p>
+  containerFeed.innerHTML = `<h1>Olá, !</h1>
+  <p>Compartilhe sua música favorita do momento, indique playlists e curta as recomendações!</p>
 
     <div class="container2">
-      <label>O que você está lendo no momento?</label><br>
+      <label>O que você está ouvindo no momento?</label><br>
         <textarea></textarea><br>
+        <button type="button">Postar</button>
     </div>
     <div class="buttons">
-      <button type="button">Gostei</button>
-      <button type="button">Não Gostei</button>
-      <button type="button">Lendo</button>
+      <button type="button">Amei</button>
+      <button type="button">Ouvindo</button>
       <button type="button">Salvar</button>
+    </div>
+    <div>
+    <button type="button">Sair</button>
     </div>`
+    
   return containerFeed
 }

@@ -1,0 +1,23 @@
+#container {
+  background-color: #fff9f7;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 500px;
+  width: 500px;
+  height: 500px;
+}
+
+.li {
+  background-color: #fff9f7;
+  font-family: Arial, sans-serif;
+  padding: 20px;
+  margin: 0 auto;
+  max-width: 500px;
+}
+
+.cadastro-box {
+  background-color: #FFA07A;
+  padding: 20px; /* Define o espaço interno da caixa de cadastro */
+  border-radius: 5px; /* Define o raio das bordas da caixa de cadastro */
+}
