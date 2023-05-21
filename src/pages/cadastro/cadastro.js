@@ -1,8 +1,5 @@
 import { register } from "../../lib/firebase";
 
-// função que o elemento HTML da Home do site
-import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
-
 export function Cadastro() {
   const containerCadastro = document.createElement("div");
   containerCadastro.id = "containerCadastro"
@@ -16,13 +13,11 @@ export function Cadastro() {
     <button type="submit" id="submit-button">CRIAR CONTA</button>
   </form>`
 
-  const auth =  getAuth();
-
   const submitButton = containerCadastro.querySelector('#submit-button');
   submitButton.addEventListener('click', function(event) {
     event.preventDefault(); // Evita que a página seja recarregada
     
-    const name = containerCadastro.querySelector('#name').value;
+    const name = containerCadastro.querySelector('#name').value; //usar depois pra resgatar nome
     const username = containerCadastro.querySelector('#username').value;
     const email = containerCadastro.querySelector('#email').value;
     const password = containerCadastro.querySelector('#password').value;

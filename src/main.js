@@ -25,7 +25,6 @@ const init = () => {
 }
 
 window.addEventListener("load", () => {
-   document.getElementById("root").append(Home())
   main.appendChild(Home());
   init();
 })

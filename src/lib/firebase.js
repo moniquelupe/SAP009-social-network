@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import { getAuth } from "firebase/auth";
+import { signInWithEmailAndPassword } from "firebase/auth";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDCOabATt8_vHEHcC3tx7ugb2IhONhZHw",
@@ -20,7 +21,7 @@ export function register(email, password) {
   createUserWithEmailAndPassword(auth, email, password)
   .then((response) => {
     window.location.hash = ("#feed")
-    console.log("Conta criada com sucesso!")
+    alert("Conta criada com sucesso!")
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -28,6 +29,21 @@ export function register(email, password) {
     console.log(errorCode, errorMessage);
   });
 }
+
+export function login(email, password) {
+  signInWithEmailAndPassword(auth, email, password)
+    .then((userCredential) => {
+      const user = userCredential.user;
+      window.location.hash = "#feed";
+      console.log("Login realizado com sucesso!");
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });
+}
+
 
 /*
 1. criar uma função de login que recebe e-mail e senha por parametro
