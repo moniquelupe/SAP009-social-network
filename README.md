@@ -1,4 +1,20 @@
-# Criando uma Rede Social
+# Music GO!
+
+Terceiro projeto realizado para o Bootcamp da [Laboratória](https://www.laboratoria.la/br). na turma SAP009. O projeto consiste em uma rede social responsiva destinada a unir mulheres apaixonadas por música, por descobrir novos artistas e acompanhar os lançamentos. A interface permite a criação de uma conta de cadastro e login através do firebase. As usuárias podem interagir através de postagens (com possibilidade de edição e exclusão dos conteúdos postados). As usuárias acessam a aplicação através da criação de contas e login autenticados pelo Firebase. 
+
+***
+<div align="center">
+  
+  Acesse o projeto: [aqui](https://code-girlsio.web.app/). 
+  <br>
+  <br>
+  Desenvolvido por <br>
+  <br>
+   Monique Lupe Andrade<br>
+  [Linkedin](https://www.linkedin.com/in/moniquelupe/) | [Github](https://github.com/moniquelupe)
+  <br>
+
+  </div>
 
 ## Índice
 
