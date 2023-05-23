@@ -1,17 +1,23 @@
+@import "./pages/home/home.css";
+@import "./pages/cadastro/cadastro.css";
+@import "./pages/feed/feed.css";
+
 body {
   background-color: #ffff;
 }
 
 * {
   box-sizing: border-box;
-  color: #000
+  color: #000;
+  margin: 0;
 
 }
 
-footer, ul {
+footer {
+  bottom: 0;
   background-color: #fff9f7;
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 500px;
   font-family: Arial, sans-serif;
+  width: 100%;
 }
+
+

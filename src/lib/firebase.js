@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { getAuth } from "firebase/auth";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
+import { getFirestore, collection, addDoc, } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDCOabATt8_vHEHcC3tx7ugb2IhONhZHw",
@@ -13,29 +12,30 @@ const firebaseConfig = {
 };
 // Inicializa o FireBase
 const app = initializeApp(firebaseConfig);
+const db = getFirestore(app);
 
-//Criando a função de SignIn (register)
+//Criando a função de Cadastro (register)
 const auth = getAuth();
-  
+
 export function register(email, password) {
   createUserWithEmailAndPassword(auth, email, password)
-  .then((response) => {
-    window.location.hash = ("#feed")
-    alert("Conta criada com sucesso!")
-  })
-  .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
-    console.log(errorCode, errorMessage);
-  });
+    .then((response) => {
+      window.location.hash = ("#feed")
+      alert("Conta criada com sucesso!")
+    })
+    .catch((error) => {
+      const errorCode = error.code;
+      const errorMessage = error.message;
+      console.log(errorCode, errorMessage);
+    });
 }
-
+//Criando a função de login (SignIn)
 export function login(email, password) {
   signInWithEmailAndPassword(auth, email, password)
     .then((userCredential) => {
       const user = userCredential.user;
       window.location.hash = "#feed";
-      console.log("Login realizado com sucesso!");
+      alert("Login realizado com sucesso!");
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -44,12 +44,12 @@ export function login(email, password) {
     });
 }
 
+//Função de adicionar posts ao banco de dados do firestore
+export async function adicionarPost(PostText) {
+  const postsCollection = await addDoc(collection(db, "postsFeed"), {
+    date: new Date(),
+    post: PostText,
+    username: auth.currentUser.displayName,
+  });
+}
 
-/*
-1. criar uma função de login que recebe e-mail e senha por parametro
-2. essa função vai chamar o sign in, email e senha
-3. criar uma função de cadastro que também recebe e-mail, senha, nome de usuário pro cadastro
-4. essa função vai chamar o createUserWithEmailAndPassword no firebase
-5. configurar firebase
-
-*/

@@ -1,23 +1,56 @@
 #container {
   background-color: #fff9f7;
   font-family: Arial, sans-serif;
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 500px;
-  width: 500px;
-  height: 500px;
 }
 
-.li {
-  background-color: #fff9f7;
-  font-family: Arial, sans-serif;
-  padding: 20px;
-  margin: 0 auto;
-  max-width: 500px;
-}
 
 .cadastro-box {
   background-color: #FFA07A;
   padding: 20px; /* Define o espaço interno da caixa de cadastro */
   border-radius: 5px; /* Define o raio das bordas da caixa de cadastro */
+}
+
+header {
+    background: #fea183;
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.header-btn {
+  background: #fe6636;
+  margin-right: 6vh;
+  width: 25vw;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: arial, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  border: none;
+  height: 7vh;
+}
+
+.home-texts {
+  margin: 4vh;
+}
+
+.home-texts h1 {
+  margin-bottom: 3vh;
+}
+
+p {
+  font-size: 21px;
+  margin-right: 5vh;
+}
+
+.home-img {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.home-img img {
+  width: 20vw;
 }

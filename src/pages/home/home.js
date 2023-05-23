@@ -1,12 +1,26 @@
 import { login } from "../../lib/firebase"
+import home1 from "../../../fotos/home1.png"
+import home2 from "../../../fotos/home2.png"
 
 // função que o elemento HTML da Home do site
 export function Home() {
   const container = document.createElement("div");
   container.id = "container"
-  container.innerHTML = `<h1>Music Go!</h1>
-    <p>Junte-se a uma <strong>rede social</strong> para mulheres amantes de música.</p><br> 
-    <p>Descubra novos discos, artistas e compartilhe suas recomendações!</p>
+  container.innerHTML = `
+    <header class="header-css">
+      <button class="header-btn" 
+        <a href="/#cadastro">Cadastre-se</a>
+      </button>
+    </header>
+    <div class="home-texts">
+      <h1>Music Go!</h1>
+      <p>Junte-se a uma <strong>rede social</strong> para mulheres amantes de música.
+      Descubra novos discos, artistas e compartilhe suas recomendações!</p><br> 
+    </div>
+    <div class="home-img">
+      <img src="${home1}" alt="Pessoa dançando usando headphones">
+      <img src="${home2}" alt="Pessoa dançando usando headphones">
+    </div>
       <form>
           <h2>Faça o seu login</h2>
           <label for="email">Digite o seu e-mail:</label>
@@ -27,7 +41,6 @@ export function Home() {
     event.preventDefault();
     login(email.value, password.value);
   });
-
 
   return container
 }
