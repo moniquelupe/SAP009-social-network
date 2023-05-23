@@ -1,6 +1,7 @@
 import { initializeApp } from "firebase/app";
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, collection, addDoc, } from "firebase/firestore";
+import { getFirestore, collection, addDoc } from "firebase/firestore";
+import { getDocs, onSnapshot } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDCOabATt8_vHEHcC3tx7ugb2IhONhZHw",
@@ -53,3 +54,13 @@ export async function adicionarPost(PostText) {
   });
 }
 
+//Função printar posts no feed
+export const printPost = () => getDocs(collection(db, "postsFeed"));
+
+//Função que atualiza automaticamente os posts no feed, sem precisar recarregar a página
+export const onPost = () => console.log('onPost')
+
+export {
+  collection,
+  db
+}

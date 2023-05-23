@@ -15,27 +15,27 @@ export function Home() {
     <div class="home-texts">
       <h1>Music Go!</h1>
       <p>Junte-se a uma <strong>rede social</strong> para mulheres amantes de música.
-      Descubra novos discos, artistas e compartilhe suas recomendações!</p><br> 
+      Descubra novos discos, artistas e compartilhe suas recomendações!</p>
     </div>
     <div class="home-img">
       <img src="${home1}" alt="Pessoa dançando usando headphones">
       <img src="${home2}" alt="Pessoa dançando usando headphones">
     </div>
-      <form>
+      <div class="form-login">
+        <form>
           <h2>Faça o seu login</h2>
-          <label for="email">Digite o seu e-mail:</label>
-          <input type="text" id="email" name="email"><br><br>
-            <label for="password">Senha:</label>
-          <input type="password" id="password" name="password"><br><br>
-            <button type="submit" id="acessar">ACESSAR</button>
-      </form>
+          <input type="text" class="input-home" placeholder="Digite o seu e-mail" name="email">
+          <input type="password" class="input-home" placeholder="******" name="password">
+            <button type="submit" class="btn-acessar">ACESSAR</button>
+        </form>
+      </div>
             <p>É nova por aqui? <a href="#">Cadastre-se</a>.</p>
             <p>Esqueceu sua senha? <a href="#">Clique aqui</a>.</p>`
   // aqui podem ser adicionados eventos de dom (listeners, queryselector etc)
   const email = container.querySelector('#email');
   const password = container.querySelector('#password');
 
-  const acessar = container.querySelector("#acessar");
+  const acessar = container.querySelector(".btn-acessar");
 
   acessar.addEventListener("click", function (event) { 
     event.preventDefault();

@@ -13,7 +13,7 @@ export function Cadastro() {
   <h1>Seja bem-vinda!</h1>
   <img src="${cadastro1}" alt="Celular com olho no meio">
   <p>Faça o seu cadastro e comece agora a compartilhar suas músicas favoritas!</p>
-  <form>
+  <form class="form-signup">
     <input type="text" id="name" name="name" placeholder="Nome e sobrenome"><br><br>
     <input type="text" id="username" name="username" placeholder="Nome de usuário"><br><br>
     <input type="email" id="email" name="email" placeholder="E-mail"><br><br>
@@ -33,7 +33,7 @@ export function Cadastro() {
     //Regex (Expressão regular) para validar o formato do e-mail
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    //Vdalidações para os inputs de cadastro não ficarem 1. vazios, 2. com e-mail inválido, 3. com senha menor do que 6 caracteres
+    //Validações para os inputs de cadastro não ficarem 1. vazios, 2. com e-mail inválido, 3. com senha menor do que 6 caracteres
     if (name.length === 0 || username.length === 0 || email.length === 0 || password.length === 0) {
       alert('Preencha todos os campos antes de criar uma conta!');
     } else if (!emailRegex.test(email)) {

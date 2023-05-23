@@ -3,13 +3,6 @@
   font-family: Arial, sans-serif;
 }
 
-
-.cadastro-box {
-  background-color: #FFA07A;
-  padding: 20px; /* Define o espaço interno da caixa de cadastro */
-  border-radius: 5px; /* Define o raio das bordas da caixa de cadastro */
-}
-
 header {
     background: #fea183;
     width: 100vw;
@@ -53,4 +46,36 @@ p {
 
 .home-img img {
   width: 20vw;
+}
+
+.form-login {
+  display: flex;
+  justify-content: center;
+}
+
+.form-login form {
+  background-color: #fea183;
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  border: solid #fe6636;
+  align-items: center;
+}
+
+.input-home {
+  background: #fea183;
+  border: none;
+  border-bottom: solid;
+  padding-left: 5px;
+  margin: 10px 0px
+}
+
+.btn-acessar {
+  background: #fe6636;
+  border: none;
+  border-radius: 50px;
+  width: 10vw;
+  height: 4vh;
+  font-weight: bold;
+  color: #fff9f7;
 }

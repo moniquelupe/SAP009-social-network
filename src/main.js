@@ -1,6 +1,6 @@
 import { Home } from './pages/home/home.js';
 import { Cadastro } from './pages/cadastro/cadastro.js';
-import { Feed } from './pages/feed/feed.js';
+import { Feed, conectarDados } from './pages/feed/feed.js';
 
 
 const main = document.getElementById('root');
@@ -17,6 +17,7 @@ const init = () => {
         break;
       case "#feed":
         main.appendChild(Feed());
+        conectarDados();
         break;
       default:
         main.appendChild(Home());
