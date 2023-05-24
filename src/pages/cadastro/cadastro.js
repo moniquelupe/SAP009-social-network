@@ -41,7 +41,7 @@ export function Cadastro() {
     } else if (password.length < 6) {
       alert('A senha deve ter pelo menos 6 caracteres!');
     } else {
-      register(email, password);
+      register(email, password, username);
     }
   });
 

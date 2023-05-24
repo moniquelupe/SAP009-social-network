@@ -29,8 +29,10 @@ export function Home() {
             <button type="submit" class="btn-acessar">ACESSAR</button>
         </form>
       </div>
-            <p>É nova por aqui? <a href="#">Cadastre-se</a>.</p>
-            <p>Esqueceu sua senha? <a href="#">Clique aqui</a>.</p>`
+        <div class="bottom-texts">
+            <h4>É nova por aqui? <a href="#">Cadastre-se</a>.</h4>
+            <h4>Esqueceu sua senha? <a href="#">Clique aqui</a>.</h4>
+        </div>`
   // aqui podem ser adicionados eventos de dom (listeners, queryselector etc)
   const email = container.querySelector('#email');
   const password = container.querySelector('#password');

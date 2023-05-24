@@ -18,9 +18,15 @@ const db = getFirestore(app);
 //Criando a função de Cadastro (register)
 const auth = getAuth();
 
-export function register(email, password) {
+export async function register(email, password, username) {
   createUserWithEmailAndPassword(auth, email, password)
-    .then((response) => {
+    .then(async(response) => {
+      await updateProfile(auth.currentUser, {
+        displayName: username,
+      }).then(() => {
+      }).catch((error) => {
+      });
+
       window.location.hash = ("#feed")
       alert("Conta criada com sucesso!")
     })

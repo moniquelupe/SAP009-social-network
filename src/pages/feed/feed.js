@@ -11,6 +11,7 @@ export const conectarDados = () => {
       const postagemFeed = doc.data();
       containerPost += `
         <div class="feed-posts">
+            <header class="username">${postagemFeed.username}</header>
             <textarea class="text-posted" id="text-posted" cols="50%" rows="5%" disabled>${postagemFeed.post}</textarea>
           </div>
           <div class="buttons">

@@ -79,3 +79,26 @@ p {
   font-weight: bold;
   color: #fff9f7;
 }
+
+footer {
+  background: #fea183;
+  width: 100vw;
+  height: 10vh;
+  align-items: center;
+}
+
+footer p {
+  margin-top: 5px;
+}
+
+.footer_links {
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+
+}
+
+.bottom-text.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
