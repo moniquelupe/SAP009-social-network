@@ -1,7 +1,6 @@
 import { onSnapshot } from "firebase/firestore";
 import { adicionarPost, collection, db } from "../../lib/firebase"
 
-
 export const conectarDados = () => {
   const textPosted = document.getElementById('postagens');
   onSnapshot(collection(db, 'postsFeed'), (querySnapshot) => {

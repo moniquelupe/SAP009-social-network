@@ -1,7 +1,6 @@
 import { initializeApp } from "firebase/app";
-import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "firebase/auth";
-import { getFirestore, collection, addDoc } from "firebase/firestore";
-import { getDocs, onSnapshot } from "firebase/firestore";
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { getFirestore, collection, addDoc, getDocs, orderBy } from "firebase/firestore";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBDCOabATt8_vHEHcC3tx7ugb2IhONhZHw",
@@ -16,7 +15,7 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
 //Criando a função de Cadastro (register)
-const auth = getAuth();
+export const auth = getAuth();
 
 export async function register(email, password, username) {
   createUserWithEmailAndPassword(auth, email, password)
@@ -61,12 +60,9 @@ export async function adicionarPost(PostText) {
 }
 
 //Função printar posts no feed
-export const printPost = () => getDocs(collection(db, "postsFeed"));
+export const printPost = () => getDocs(collection(db, "postsFeed", orderBy("date", "desc")));
 
 //Função que atualiza automaticamente os posts no feed, sem precisar recarregar a página
 export const onPost = () => console.log('onPost')
 
-export {
-  collection,
-  db
-}
+export { collection, db }

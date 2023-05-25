@@ -91,13 +91,12 @@ footer p {
   margin-top: 5px;
 }
 
-.footer_links {
+.footer_links, .footer_links a {
   font-family: Arial, sans-serif;
   font-size: 15px;
-
 }
 
-.bottom-text.text {
+.bottom-texts {
   display: flex;
   flex-direction: column;
   align-items: center;

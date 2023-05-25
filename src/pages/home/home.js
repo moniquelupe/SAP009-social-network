@@ -24,8 +24,8 @@ export function Home() {
       <div class="form-login">
         <form>
           <h2>Faça o seu login</h2>
-          <input type="text" class="input-home" placeholder="Digite o seu e-mail" name="email">
-          <input type="password" class="input-home" placeholder="******" name="password">
+          <input type="text" id="email" class="input-home" placeholder="Digite o seu e-mail" name="email">
+          <input type="password" id="password" class="input-home" placeholder="******" name="password">
             <button type="submit" class="btn-acessar">ACESSAR</button>
         </form>
       </div>
@@ -36,6 +36,7 @@ export function Home() {
   // aqui podem ser adicionados eventos de dom (listeners, queryselector etc)
   const email = container.querySelector('#email');
   const password = container.querySelector('#password');
+  
 
   const acessar = container.querySelector(".btn-acessar");
 
