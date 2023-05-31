@@ -5,7 +5,7 @@ Terceiro projeto realizado para o Bootcamp da [Laboratória](https://www.laborat
 ***
 <div align="center">
   
-  Acesse o projeto: [aqui](https://code-girlsio.web.app/). 
+  Acesse o projeto: [aqui](https:///). 
   <br>
   <br>
   Desenvolvido por <br>
