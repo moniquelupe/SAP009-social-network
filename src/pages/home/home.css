@@ -5,7 +5,7 @@
 
 header {
     background: #fea183;
-    width: 100vw;
+    width: 130vw;
     height: 10vh;
     display: flex;
     flex-direction: row-reverse;
@@ -14,15 +14,20 @@ header {
 
 .header-btn {
   background: #fe6636;
-  margin-right: 6vh;
-  width: 25vw;
+  margin-right: 32vh;
+  width: 35vw;
   border-radius: 5px;
   color: #ffffff;
   font-family: arial, sans-serif;
-  font-size: 19px;
+  font-size: 17px;
   font-weight: bold;
   border: none;
   height: 7vh;
+}
+
+.header-btn a {
+  color: #ffffff;
+  text-decoration: none;
 }
 
 .home-texts {
@@ -31,11 +36,6 @@ header {
 
 .home-texts h1 {
   margin-bottom: 3vh;
-}
-
-p {
-  font-size: 21px;
-  margin-right: 5vh;
 }
 
 .home-img {
@@ -54,7 +54,7 @@ p {
 }
 
 .form-login form {
-  background-color: #fea183;
+  background-color: #ffdbd1;
   display: flex;
   flex-direction: column;
   padding: 15px;
@@ -63,7 +63,7 @@ p {
 }
 
 .input-home {
-  background: #fea183;
+  background: #ffdbd1;
   border: none;
   border-bottom: solid;
   padding-left: 5px;
@@ -73,31 +73,45 @@ p {
 .btn-acessar {
   background: #fe6636;
   border: none;
-  border-radius: 50px;
-  width: 10vw;
-  height: 4vh;
+  border-radius: 20px;
+  width: 30vw;
+  height: 5vh;
   font-weight: bold;
   color: #fff9f7;
 }
 
-footer {
+.footer {
   background: #fea183;
+  margin-top: 2em;
   width: 100vw;
   height: 10vh;
   align-items: center;
+  display: flex;
+  justify-content: center;
 }
 
 footer p {
   margin-top: 5px;
 }
 
-.footer_links, .footer_links a {
+.footer_links {
   font-family: Arial, sans-serif;
   font-size: 15px;
 }
 
 .bottom-texts {
+  margin-top: 1em;
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-size: 15px;
+}
+
+.cadastre-se-link, .clique-aqui-link {
+  font-weight: bold;
+  background-color: lightgray;
+}
+
+.cadastre-se, .esqueceu-senha {
+  font-weight: normal;
 }

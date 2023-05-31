@@ -12,11 +12,11 @@ export const conectarDados = () => {
         <div class="feed-posts">
             <header class="username">${postagemFeed.username}</header>
             <textarea class="text-posted" id="text-posted" cols="50%" rows="5%" disabled>${postagemFeed.post}</textarea>
-          </div>
-          <div class="buttons">
-            <button data-id="${doc.id}" class="edit">Editar</button>
-            <button class="delete">Excluir</button>
+            <button class="edit-post" data-id="${doc.id}" class="edit">Editar</button>
+            <button class="delete-post">Excluir</button>
           </div> 
+        </div>
+    
           `;
     });
 
@@ -33,25 +33,25 @@ export function Feed() {
   containerFeed.id = "containerFeed"
   containerFeed.innerHTML = `
   <body>
-      <header class="header-css">
-        <button class="header-btn" 
-        <a href="/#feed">Feed</a>
-      </header>
-        <h1>Olá, !</h1>
-        <p>Compartilhe sua música favorita do momento, indique playlists e curta as recomendações!</p>
-      <form id="write-posts-area">
-        <div class="container2">
-          <label>O que você está ouvindo no momento?</label><br>
-          <textarea id="post-text" rows="3" placeholder="Digite aqui sua recomendação!"></textarea><br>
+  <header class="header-css">
+    <button class="header-btn">
+      <a href="#">Sair</a>
+    </button>
+  </header>
+  <div class="feed-content">
+    <h2>Olá!</h2>
+    <p>Compartilhe sua música favorita do momento, indique playlists e curta as recomendações!</p>
+    <form id="write-posts-area">
+      <div class="container2">
+        <textarea id="post-text" rows="3" placeholder="Digite aqui sua recomendação!"></textarea><br>
+        <div class="btn-postar">
           <button id="post-button">Postar</button>
         </div>
-        <div id="postagens">
-        </div> 
-        <div>
-          <button id="exit-button">Sair</button>
-        </div>
-      </form>
-  </body>
+      </div>
+    </form>
+    <div id="postagens"></div>
+  </div>
+</body>
 `
   const postText = containerFeed.querySelector('#post-text');
   const postButton = containerFeed.querySelector('#post-button');

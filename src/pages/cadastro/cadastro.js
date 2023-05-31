@@ -1,25 +1,33 @@
 import { register } from "../../lib/firebase";
 import cadastro1 from "../../../fotos/cadastro1.png"
+import cadastro2 from "../../../fotos/cadastro2.png"
 
 export function Cadastro() {
   const containerCadastro = document.createElement("div");
   containerCadastro.id = "containerCadastro"
   containerCadastro.innerHTML = `
   <header class="header-css">
-    <button class="header-btn" 
-      <a href="/#">Home</a>
+    <button class="header-btn">
+      <a href="#">Home</a>
     </button>
   </header>
-  <h1>Seja bem-vinda!</h1>
-  <img src="${cadastro1}" alt="Celular com olho no meio">
-  <p>Faça o seu cadastro e comece agora a compartilhar suas músicas favoritas!</p>
-  <form class="form-signup">
-    <input type="text" id="name" name="name" placeholder="Nome e sobrenome"><br><br>
-    <input type="text" id="username" name="username" placeholder="Nome de usuário"><br><br>
-    <input type="email" id="email" name="email" placeholder="E-mail"><br><br>
-    <input type="password" id="password" name="password" placeholder="Crie uma senha"><br><br>
-    <button type="submit" id="submit-button">CRIAR CONTA</button>
-  </form>`
+    <div class="top-text">
+      <p class="bem-vinda">Seja bem-vinda!</p>
+    </div>
+    <div class="cadastro-texts">
+      <p>Faça o seu cadastro e comece agora a compartilhar suas músicas favoritas!</p>
+    </div>
+    <form class="form-signup">
+      <input type="text" id="name" name="name" placeholder="Nome e sobrenome">
+      <input type="text" id="username" name="username" placeholder="Nome de usuário">
+      <input type="email" id="email" name="email" placeholder="E-mail">
+      <input type="password" id="password" name="password" placeholder="Crie uma senha">
+      <button type="submit" id="submit-button">CRIAR CONTA</button>
+    </form>
+    <div class="img-cadastro">
+    <img src="${cadastro1}" alt="Celular com olho no meio">
+    <img src="${cadastro2}" alt="Celular com olho no meio">
+  </div>`
 
   const submitButton = containerCadastro.querySelector('#submit-button');
   submitButton.addEventListener('click', function(event) {

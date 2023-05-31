@@ -8,8 +8,8 @@ export function Home() {
   container.id = "container"
   container.innerHTML = `
     <header class="header-css">
-      <button class="header-btn" 
-        <a href="/#cadastro">Cadastre-se</a>
+      <button class="header-btn">
+        <a href="#cadastro">Cadastre-se</a>
       </button>
     </header>
     <div class="home-texts">
@@ -30,8 +30,8 @@ export function Home() {
         </form>
       </div>
         <div class="bottom-texts">
-            <h4>É nova por aqui? <a href="#">Cadastre-se</a>.</h4>
-            <h4>Esqueceu sua senha? <a href="#">Clique aqui</a>.</h4>
+            <h4 class="cadastre-se">É nova por aqui? <a class="cadastre-se-link" href="#">Cadastre-se</a>.</h4>
+            <h4 class="esqueceu-senha">Esqueceu sua senha? <a class="clique-aqui-link"href="#">Clique aqui</a>.</h4>
         </div>`
   // aqui podem ser adicionados eventos de dom (listeners, queryselector etc)
   const email = container.querySelector('#email');

@@ -1,5 +1,88 @@
 #containerFeed {
   background-color: #fff9f7;
   font-family: Arial, sans-serif;
+  display: flex;
+  flex-direction: column;
   
+}
+
+p, h2 {
+  margin-bottom: 0.5em;
+  font-family: arial, sans-serif;
+
+}
+
+.feed-content {
+  padding: 15px
+}
+
+.container2 {
+  background-color: #fea183;
+  width: 93vw;
+  margin-bottom: 6em;
+}
+
+#post-text {
+  width: 86vw;
+  height: 20vh;
+  margin: 20px;
+  font-family: arial, sans-serif;
+  font-size: 1.3em
+
+}
+
+.header-btn {
+  color: #ffffff;
+}
+
+.btn-postar {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+#post-button {
+  background: #fe6636;
+  margin-right: 4vh;
+  margin-bottom: 4vh;
+  width: 25vw;
+  border-radius: 5px;
+  color: #ffffff;
+  font-family: arial, sans-serif;
+  font-size: 19px;
+  font-weight: bold;
+  border: none;
+  height: 7vh;
+}
+
+.bem-vinda {
+  font-family: arial, sans-serif;
+  font-size: 19px;
+}
+
+.username {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.text-posted {
+  width: 86vw;
+  height: 20vh;
+  margin: 20px;
+  font-family: arial, sans-serif;
+  font-size: 1.1em;
+}
+
+.edit-post, .delete-post {
+  background: #fe6636;
+    margin-right: 4vh;
+    margin-bottom: 4vh;
+    width: 25vw;
+    border-radius: 5px;
+    color: #ffffff;
+    font-family: arial, sans-serif;
+    font-size: 19px;
+    font-weight: bold;
+    border: none;
+    height: 7vh;
 }
